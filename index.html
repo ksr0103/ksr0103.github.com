@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>김지훈 썩을놈</title>
+<title>KimJiHun Bitch</title>
     <style>
         h1 {
             font-size : 100px;
@@ -16,7 +16,7 @@
     </style>
 </head>
 <h1 id="clock" style="color:gray;">00:00</h1>
-    <p>김지훈 전용 시계</p>
+    <p>Kim Ji Hun Exclusive Use Count</p>
 <script>
 
 var clockTarget = document.getElementById("clock");
@@ -31,7 +31,7 @@ function clock() {
 
     var day = date.getDay();
 
-    var week = ['일', '월', '화', '수', '목', '금', '토'];
+    var week = ['Sun', 'Mon', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 
     var hours = date.getHours();
 
@@ -39,7 +39,7 @@ function clock() {
 
     var seconds = date.getSeconds();
 
-    clockTarget .innerText = `${month+1}월 ${clockDate}일 ${week[day]}요일` +
+    clockTarget .innerText = `${month+1}월 ${clockDate}일 ${week[day]}DAY` +
 
     `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes }`  : minutes }:${seconds < 10 ? `0${seconds }`  : seconds }`;
  
