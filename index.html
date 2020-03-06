@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-<script type="text/javascript">
-    function showClock()
-    {
-        var currentDate=new Date();
-        var divClock=document.getElementById("divClock");
-        var apm=currentDate.getHours();
-        if(apm<12)
-        {
-            apm="오전";
-        }
-        else
-        {
-            apm="오후";
-        }
-        
-        var msg = "현재시간 : "+apm +(currentDate.getHours()-12)+"시";
-        msg += currentDate.getMinutes() + "분";
-        msg += currentDate.getSeconds() + "초";
-        
-        divClock.innerText=msg;
-        
-        setTimeout(showClock,1000);
-    }
-</script>
-</head>
-<body onload="showClock()">
-    <div id="divClock" class="clock"></div>
-    
+<meta charset="UTF-8">
+
+<h1 id="clock" style="color:gray;">00:00</h1>
+<script>
+
+var clockTarget = document.getElementById("clock");
+
+
+function clock() {
+    var date = new Date();
+
+    var month = date.getMonth();
+
+    var clockDate = date.getDate();
+
+    var day = date.getDay();
+
+    var week = ['일', '월', '화', '수', '목', '금', '토'];
+
+    var hours = date.getHours();
+
+    var minutes = date.getMinutes();
+
+    var seconds = date.getSeconds();
+
+    clockTarget .innerText = `${month+1}월 ${clockDate}일 ${week[day]}요일` +
+
+    `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes }`  : minutes }:${seconds < 10 ? `0${seconds }`  : seconds }`;
+ 
+}
+function init() {
+
+clock();
+
+setInterval(clock, 1000);
+
+}
+
+init();
+</script>    
 </body>
 </html>
