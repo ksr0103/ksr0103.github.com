@@ -1,6 +1,0 @@
-theme: jekyll-theme-cayman
-
-<?php 
-  $var = 123;
-  echo $var;
-?>
