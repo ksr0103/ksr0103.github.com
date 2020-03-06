@@ -23,7 +23,6 @@
     <body>
         <div>
             <p class="pp" id="clock" style="color:black;">00:00</p>
-            <p class="pp" id="clock_1" style="color:black;"></p>
             <p>KimJiHoon Exclusive Use Count</p> 
         </div>
     </body>
@@ -42,10 +41,7 @@ function clock() {
     var day = date.getDay();
 
     var week = ['Sun', 'Mon', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-
- 
-}
- function clock_1() {
+    
     var hours = date.getHours();
 
     var minutes = date.getMinutes();
@@ -55,7 +51,8 @@ function clock() {
     clockTarget .innerText = `${month+1}/${clockDate}/${week[day]}DAY ` +
 
     `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes }`  : minutes }:${seconds < 10 ? `0${seconds }`  : seconds }`;
- }
+ 
+}
     
 function init() {
 
