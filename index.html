@@ -6,6 +6,7 @@
     <style>
         .pp {
             font-size : 100px;
+            width: 200px;
             font-family: Franklin Gothic Medium;
             text-align : center;
         }
@@ -48,7 +49,7 @@ function clock() {
 
     var seconds = date.getSeconds();
 
-    clockTarget .innerText = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes }`  : minutes }:${seconds < 10 ? `0${seconds }`  : seconds }`;
+    clockTarget .innerText = `${hours < 10 ? `0${hours}`  :  hours}:${minutes < 10 ? `0${minutes }`   :  minutes }:${seconds < 10 ? `0${seconds }`  : seconds }`;
  
 }
     
